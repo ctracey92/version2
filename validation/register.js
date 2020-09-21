@@ -31,11 +31,11 @@ module.exports = function validateRegisterInput(data) {
         errors.password2 = "Confirm password field is required";
     }
 
-    if (Validator.isLength(data.password, { min: 8, max: 50 })) {
+    if (!Validator.isLength(data.password, { min: 8, max: 50 })) {
         errors.password = "Password must be between 8 and 50 characters";
     }
 
-    if (Validator.equals(data.password, data.password2)) {
+    if (!Validator.equals(data.password, data.password2)) {
         errors.password = "Passwords must match";
     }
 
