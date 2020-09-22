@@ -10,23 +10,23 @@ const Login = (props) => {
     const [errors,setErrors] = useState({});
 
     const onSubmit = e => {
-        e.preventDeault();
-
+        e.preventDefault();
         const userData = {
             email: email,
             password: password
         }
 
         console.log(userData);
+        
 
     }
 
     return(
     <div>
         <h3>Don't have an account?</h3>
-        <a href="/register">Register</a>
+        <Link to="/register">Register</Link>
         <Container>
-            <Form>
+            <Form onSubmit={onSubmit}>
                 <Row form>
                     <FormGroup>
                         <Label for="email">Email</Label>
@@ -39,7 +39,7 @@ const Login = (props) => {
                         <Input type="password" name="password" id="password" placeholder="" onChange={e => setPassword(e.target.value)} errors={errors.password}/>
                     </FormGroup>
                 </Row>
-                <Button onSubmit={e => onSubmit(e)}>Login</Button>
+                <Button type="submit">Login</Button>
             </Form>
         </Container>
     </div>

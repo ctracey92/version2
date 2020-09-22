@@ -10,7 +10,7 @@ const Register = props => {
     const [errors,setErrors] = useState({});
 
     const onSubmit = e => {
-        e.preventDeault();
+        e.preventDefault();
 
         const newUser = {
             name: name,
@@ -26,9 +26,9 @@ const Register = props => {
     return(
         <div>
             <h3>Already have an account?</h3>
-            <a href="/login">Login</a>
+            <Link to="/login">Login</Link>
             <Container>
-                <Form>
+                <Form onSubmit={onSubmit}>
                     <Row form>
                         <Col md={6}>
                         <FormGroup>
@@ -52,7 +52,7 @@ const Register = props => {
                         <Label for="password2">Confirm password</Label>
                         <Input type="password" name="address2" id="password2" placeholder="" onChange={e => setPassword2(e.target.value)} errors={errors.name2}/>
                     </FormGroup>
-                    <Button onSubmit={e => onSubmit(e)}>Submit</Button>
+                    <Button>Submit</Button>
                 </Form>
             </Container>
  

@@ -14,10 +14,10 @@ const Landing = props => {
                 </Row>
                 <Row>
                     <Col>
-                        <a href="/login">Log In</a>
+                        <Link to="/login">Log In</Link>
                     </Col>
                     <Col>
-                        <a href="/register">Register</a>
+                        <Link to="/register">Register</Link>
                     </Col>
                 </Row>
             </Container>
