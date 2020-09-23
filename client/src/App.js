@@ -7,9 +7,13 @@ import Landing from "./components/Pages/Landing"
 import Login from "./components/Pages/Login";
 import Register from "./components/Pages/Register";
 
+
+import {Provider} from 'react-redux';
+import store from "./store";
+
 function App() {
     return ( 
-    <div>
+    <Provider store={store}>
         <Router>
             <div className="App">
                 <Route exact path="/" component={Landing} />
@@ -17,7 +21,7 @@ function App() {
                 <Route exact path="/login" component={Login} />
             </div>
         </Router>
-    </div>
+    </Provider>
      );
     }
 
