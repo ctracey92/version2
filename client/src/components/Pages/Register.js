@@ -83,7 +83,6 @@ const Register = props => {
                     <span className="red-text">{errors.password2}</span>
                 </Form>
             </Container>
-
         </div>
     )
 };

@@ -33,7 +33,7 @@ const Login = (props) => {
             password: password
         }
 
-        loginUser(userData);
+        props.loginUser(userData);
         console.log(userData);
 
 

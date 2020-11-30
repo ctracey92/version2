@@ -23,6 +23,7 @@ export const registerUser = (userData, history) => dispatch => {
 
 //Login 
 export const loginUser = userData => dispatch => {
+    console.log('this was used')
     axios
         .post("/api/users/login", userData)
         .then(res => {
