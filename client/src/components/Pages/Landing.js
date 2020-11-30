@@ -10,7 +10,7 @@ const Landing = props => {
                     <h1>Welcome to my page!</h1>
                 </Row>
                 <Row>
-                    <p>Please escuse the mess as we are currently under renovations.</p>
+                    <p>Please excuse the mess as we are currently under renovations.</p>
                 </Row>
                 <Row>
                     <Col>
