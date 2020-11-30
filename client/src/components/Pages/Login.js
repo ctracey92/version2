@@ -24,7 +24,9 @@ const Login = (props) => {
         setErrors(props.errors)
     }, [props.errors])
 
-
+useEffect(() => {
+    console.log(props.errors)
+})
 
     const onSubmit = e => {
         e.preventDefault();
@@ -32,11 +34,7 @@ const Login = (props) => {
             email: email,
             password: password
         }
-
         props.loginUser(userData);
-        console.log(userData);
-
-
     }
 
     return (
@@ -74,8 +72,6 @@ const Login = (props) => {
             </Container>
         </div>
     )
-
-
 }
 
 Login.propTypes = {

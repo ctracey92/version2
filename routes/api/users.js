@@ -80,7 +80,7 @@ router.post("/login", (req, res) => {
                 );
             } else {
                 return res
-                    .ststaus(400)
+                    .status(400)
                     .json({ passwordincorrect: "Password incorrect" });
             }
         });

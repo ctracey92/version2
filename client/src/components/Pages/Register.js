@@ -78,9 +78,9 @@ const Register = props => {
                         <Input type="password" name="address2" id="password2" placeholder="" onChange={e => setPassword2(e.target.value)} errors={errors.name2} className={classnames("", {
                             invalid: errors.password2
                         })} />
+                        <span className="red-text">{errors.password2}</span>
                     </FormGroup>
                     <Button>Submit</Button>
-                    <span className="red-text">{errors.password2}</span>
                 </Form>
             </Container>
         </div>
